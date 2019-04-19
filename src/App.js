@@ -4,21 +4,23 @@ import Dashboard from './components/Dashboard'
 import Form from './components/Form'
 import Header from './components/Header'
 import axios from 'axios'
+import { Route, Switch } from 'react-router-dom'
+
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      inventory: [], 
+      inventory: [],
       editStatus: false
     }
   }
 
-toggleStatus= ()=> {
-  this.setState({
-    editStatus: !this.state.editStatus
-  })
-}
+  toggleStatus = () => {
+    this.setState({
+      editStatus: !this.state.editStatus
+    })
+  }
 
 
 
@@ -35,17 +37,44 @@ toggleStatus= ()=> {
   render() {
     return (
       <div className="App">
+        <Switch>
+          <Route exact path='/' component={() => {
+            return (
+              <div>
+                <Header />
+                <Dashboard productList={this.state.inventory}
+                  toggleStatus={this.toggleStatus}
+                />
+
+              </div>
+            )
+          }} />
 
 
+          <Route path='/form' component={() => {
+            return (
+              <div>
+              <Header />
+              
+              < Form editStatus={this.state.editStatus} />
+              </div>)
+          }} />
+
+
+
+
+        </Switch>
+
+{/* 
         <Header />
 
         <div className="itemContainer">
           <Dashboard productList={this.state.inventory}
-          toggleStatus={this.toggleStatus}
+            toggleStatus={this.toggleStatus}
           />
 
-          < Form  editStatus={this.state.editStatus}/>
-          </div>
+          < Form editStatus={this.state.editStatus} />
+        </div> */}
 
 
 

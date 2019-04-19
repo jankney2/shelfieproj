@@ -11,6 +11,8 @@ export default class Header extends Component {
 
 <div className="headerLogo">logo</div>
 <p>Shelfie</p>
+<button>Button</button>
+<button>Button</button>
       </div>
     )
   }
