@@ -1,0 +1,22 @@
+.product {
+  /* width: 60%; */
+  display: flex;
+  border-radius: 20px;
+  background-color: #D34735;
+  margin-right: 10%;
+  margin-top: 30px;
+
+}
+
+.product * {
+  margin: 15px;
+  padding:3%;
+}
+
+.product img {
+  width: 25%;
+  height: 5%;
+}
+
+
+
