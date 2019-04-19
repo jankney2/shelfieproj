@@ -28,9 +28,7 @@ deleteProduct= (id)=>{
         <button onClick={this.deleteProduct}>Delete</button>
 
 
-        <button onClick={()=> {
-            
-        }}>Edit</button>
+        <button onClick={this.props.toggleStatus}>Edit</button>
         
         </div>
         

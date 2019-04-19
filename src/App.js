@@ -14,10 +14,14 @@ class App extends Component {
     }
   }
 
+toggleStatus= ()=> {
+  this.setState({
+    editStatus: !this.state.editStatus
+  })
+}
 
 
 
-  
   componentDidMount() {
     axios.get('/api/inventory').then((res) => {
       this.setState({
@@ -36,9 +40,12 @@ class App extends Component {
         <Header />
 
         <div className="itemContainer">
-          <Dashboard productList={this.state.inventory} />
+          <Dashboard productList={this.state.inventory}
+          toggleStatus={this.toggleStatus}
+          />
 
-          < Form /></div>
+          < Form  editStatus={this.state.editStatus}/>
+          </div>
 
 
 

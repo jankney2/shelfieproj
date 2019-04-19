@@ -1,22 +1,33 @@
 .product {
-  /* width: 60%; */
+width:66%;
   display: flex;
   border-radius: 20px;
   background-color: #D34735;
-  margin-right: 10%;
+  /* margin-right: 10%; */
   margin-top: 30px;
 
 }
 
 .product * {
-  margin: 15px;
+  /* margin: 15px; */
   padding:3%;
 }
 
 .product img {
-  width: 25%;
-  height: 5%;
+  width: 50%;
+  height: 50%;
+  
 }
 
+.product h1 {
+  width: 80%;
+}
 
+.product button {
+  background-color: #3AD886;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+}
 
