@@ -51,6 +51,9 @@ let newObj = this.state
         <div style={{
           
           backgroundImage: `url(${this.state.imgUrl})`,
+          maxHeight:'100%',
+          maxHeight:'100%',
+          maxWidth:'100%',
           height: '200px', 
           width: '300px',
           backgroundRepeat:'no-repeat', 
