@@ -9,11 +9,15 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      inventory: []
+      inventory: [], 
+      editStatus: false
     }
   }
 
 
+
+
+  
   componentDidMount() {
     axios.get('/api/inventory').then((res) => {
       this.setState({

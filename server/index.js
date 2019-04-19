@@ -19,7 +19,7 @@ massive(
 
 app.get('/api/inventory', controller.getProducts)
 app.post('/api/inventory', controller.createProduct)
-// app.put()
 app.delete('/api/inventory/:id', controller.deleteProduct)
+app.put('/api/inventory/:id', controller.editProduct)
 
 app.listen(port, ()=>console.log(`listening on ${port}`))

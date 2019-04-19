@@ -26,7 +26,11 @@ deleteProduct= (id)=>{
         
         
         <button onClick={this.deleteProduct}>Delete</button>
-        <button>Edit</button>
+
+
+        <button onClick={()=> {
+            
+        }}>Edit</button>
         
         </div>
         

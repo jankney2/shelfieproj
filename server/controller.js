@@ -26,6 +26,14 @@ deleteProduct: (req, res)=> {
   dbInstance.delete_product([req.params.id]).then((response)=>{
     res.status(200).send(response)
   }).catch((err)=>console.log(err, "delete failed"))
+}, 
+
+editProduct: (req, res)=> {
+  const dbInstance= req.app.get('db')
+
+  dbInstance.update_product([req.body.name, req.body.price, req.body.imgUrl, req.params.id]).then((response)=>{
+    res.status(200).send(response)
+  }).catch((response)=>res.status(500).send(response))
 }
 
 }
