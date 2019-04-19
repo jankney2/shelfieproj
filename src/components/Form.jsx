@@ -44,58 +44,20 @@ let newObj = this.state
   render() {
 //if editing- do this!
     return(
-this.state.editStatus ? <div>
-  
-  
-  <div className="form" id="formId">
-        <div style={{
-          backgroundImage: `url(${this.state.imgUrl})`,
-          backgroundSize: 'auto',
-          // height: '200px', 
-          // width: '200px',
-          backgroundRepeat:'no-repeat', 
-          objectFit:'cover', 
-          // marginLeft: "25%", 
-          marginTop: "5%"
 
-          
-        }}></div>
-
-
-
-<p htmlFor="imgUrl"> Image URL:</p>
-        <input type="text" placeholder="image URL" name="imgUrl" onChange={this.changeHandler}/>
-<p htmlFor="name"> Product Name:</p>
-        <input type="text" placeholder="product name" name="name" onChange={this.changeHandler}/>
-<p htmlFor="price"> Price:</p>
-        <input type="text" placeholder="0" name="price" onChange={this.changeHandler}/>
-
-        
-<div>
-<button onClick={this.cancel}>Cancel</button>
-
-
-
-<button onClick={this.postReq}>Save Changes</button></div>
-        {/* does post request axios */}
-      </div>
-  
-
-</div>
-
-
-:
 
 
       <div className="form" id="formId">
         <div style={{
+          
           backgroundImage: `url(${this.state.imgUrl})`,
           height: '200px', 
-          width: '200px',
+          width: '300px',
           backgroundRepeat:'no-repeat', 
-          objectFit:'cover', 
-          marginLeft: "25%", 
-          marginTop: "5%"
+          objectFit:'cover',  
+          margin: 'auto'
+          
+
 
           
         }}></div>

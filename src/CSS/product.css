@@ -4,6 +4,7 @@ width:66%;
   border-radius: 20px;
   background-color: #D34735;
   /* margin-right: 10%; */
+  margin: auto;
   margin-top: 30px;
 
 }
@@ -16,12 +17,11 @@ width:66%;
 .product img {
   width: 50%;
   height: 50%;
-  
+  max-height: 300px;
+  max-width: 400px;
 }
 
-.product h1 {
-  width: 80%;
-}
+
 
 .product button {
   background-color: #3AD886;
@@ -31,3 +31,6 @@ width:66%;
   font-size: 16px;
 }
 
+.col2 {
+width: 50%;
+}

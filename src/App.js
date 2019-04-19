@@ -60,7 +60,11 @@ class App extends Component {
               </div>)
           }} />
 
+          <Route path="/edit" component={()=> {
+            //use axios get to pull data? 
+          return <Form />              
 
+          }} />
 
 
         </Switch>
