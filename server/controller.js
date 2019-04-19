@@ -6,7 +6,7 @@ module.exports= {
 
     dbInstance.get_products().then((response)=>{
       res.status(200).send(response)
-    }).catch((err)=> console.log(err, 'get Failed'))
+    }).catch((response)=>res.status(500).send(response))
 
   },
 
@@ -16,7 +16,9 @@ createProduct: (req, res)=> {
 
   dbInstance.create_product([req.body.name, +req.body.price, req.body.imgUrl]).then((response)=>{
     res.status(200).send(response)
-  }).catch((err)=> console.log(err, 'get Failed'))
+  }).catch((response)=>res.status(500).send(response)
+  
+  )
 
 }, 
 
@@ -25,7 +27,7 @@ deleteProduct: (req, res)=> {
 
   dbInstance.delete_product([req.params.id]).then((response)=>{
     res.status(200).send(response)
-  }).catch((err)=>console.log(err, "delete failed"))
+  }).catch((response)=>res.status(500).send(response))
 }, 
 
 editProduct: (req, res)=> {
